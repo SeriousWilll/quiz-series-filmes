@@ -1,7 +1,21 @@
-.titulo{
-    font-size: 50px;
+body{
+    background-color: antiquewhite;
+    
+}
+
+
+
+h1{
+    font-size: 100px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
     margin: 0;
 
+}
+
+.pergunta1{
+    font-size: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    margin: 0;
 }
