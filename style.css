@@ -1,16 +1,9 @@
-body{
-    background-color: antiquewhite;
-    
-}
-
-
-
-h1{
+.titulo{
     font-size: 100px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
     margin: 0;
-
+    color: white;
 }
 
 .pergunta1{
@@ -18,4 +11,5 @@ h1{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
     margin: 0;
+    color: white;
 }
