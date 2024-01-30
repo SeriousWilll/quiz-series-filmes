@@ -30,10 +30,10 @@
         <div class="respostas1">
         <div class="col-lg-6 col-xxl-4 my-5 mx-auto">
             <div class="d-grid gap-2">
-              <button class="btn btn-primary" type="button">Eleven</button>
-              <button class="btn btn-primary" type="button">Will</button>
-              <button class="btn btn-primary" type="button">Lucas</button>
-              <button class="btn btn-primary" type="button">Dustin</button>
+              <button onclick="verificarResposta('Eleven')" class="btn btn-primary" type="button">Eleven</button>
+              <button onclick="verificarResposta('Will')" class="btn btn-primary" type="button">Will</button>
+              <button onclick="verificarResposta('Lucas')" class="btn btn-primary" type="button">Lucas</button>
+              <button onclick="verificarResposta('Dustin)" class="btn btn-primary" type="button">Dustin</button>
               <div class="b-example-divider"></div>
 
 <div class="d-flex gap-2 justify-content-center py-5">
@@ -50,16 +50,27 @@
   </button>
  
 </div>
-<p id="ajuda" style="display:none;">Dica: O nome é um número em inglês.</p>
 
             </div>
           </div>
         </div>
 
+        <p id="resultado"></p>
+        <p id="ajuda" style="display:none;">Dica: O nome é um número em inglês.</p>
+        
 <script>
   function mostrarAjuda(){
     var ajuda = document.getElementById("ajuda");
     ajuda.style.display = "block";
+  }
+  function verificarResposta(resposta) {
+    var resultado = document.getElementById("resultado");{
+    if(resposta ==="Eleven"){
+      resultado.textContent = "CORRETO!";
+      } else{
+        resultado.textContent = "INCORRETO";
+      }
+    }
   }
 </script>
 
