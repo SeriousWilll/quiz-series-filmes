@@ -5,91 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/buttons/">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
-<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        body {
+            background-image: url(img/strangerthings.jpg);
+        }
+     
+    </style>
 </head>
 <body>
-  <style>
-   body{
-    background-image:url(img/strangerthings.jpg);
-   }
-    
-</style>
-    
-        <div class="titulo">
-            <h1>QUIZ CINÉFILO</h1>
-        </div>    
-    
-
-    <div class="perguntas">Quem é o protagonista da série "Stranger Things" e qual é a premissa central da trama?
+    <div class="titulo">
+        <h1>QUIZ CINÉFILO</h1>
     </div>
 
-        <div class="respostas1">
+    <div class="perguntas">Quem é o protagonista da série "Stranger Things" e qual é a premissa central da trama?</div>
+
+    <div class="respostas1">
         <div class="col-lg-6 col-xxl-4 my-5 mx-auto">
             <div class="d-grid gap-2">
-              <button onclick="verificarResposta('Eleven')" class="btn btn-primary" type="button">Eleven</button>
-              <button onclick="verificarResposta('Will')" class="btn btn-primary" type="button">Will</button>
-              <button onclick="verificarResposta('Lucas')" class="btn btn-primary" type="button">Lucas</button>
-              <button onclick="verificarResposta('Dustin)" class="btn btn-primary" type="button">Dustin</button>
-              <div class="b-example-divider"></div>
-
-<div class="d-flex gap-2 justify-content-center py-5">
-  <button onclick="mostrarAjuda()" class="btn btn-primary d-inline-flex align-items-center" type="button">
-    AJUDA
-    <svg class="bi ms-1" width="20" height="20"><use xlink:href="#arrow-right-short"/></svg>
-  </button>
-  <a href="PERGUNTA2.HTML"<button class="btn btn-primary d-inline-flex align-items-center" type="button">
-   PRÓXIMA PERGUNTA</a>
-   </button>
-    <svg class="bi ms-1" width="20" height="20"><use xlink:href="#arrow-right-short"/></svg>
-  </button>
-  <button class="btn btn-primary d-inline-flex align-items-center" type="button">
-    REINICIAR
-    
-  </button>
- 
-</div>
-
+                <button onclick="verificarResposta('Eleven')" class="btn btn-primary" type="button">Eleven</button>
+                <button onclick="verificarResposta('Will')" class="btn btn-primary" type="button">Will</button>
+                <button onclick="verificarResposta('Lucas')" class="btn btn-primary" type="button">Lucas</button>
+                <button onclick="verificarResposta('Dustin')" class="btn btn-primary" type="button">Dustin</button>
             </div>
-          </div>
         </div>
+    </div>
 
-        <p id="resultado"></p>
-        <p id="ajuda" style="display:none;">Dica: O nome é um número em inglês.</p>
-        
-<script>
-  function mostrarAjuda(){
-    var ajuda = document.getElementById("ajuda");
-    ajuda.style.display = "block";
-  }
-  function verificarResposta(resposta) {
-    var resultado = document.getElementById("resultado");{
-    if(resposta ==="Eleven"){
-      resultado.textContent = "CORRETO!";
-      } else{
-        resultado.textContent = "INCORRETO";
-      }
-    }
-  }
+    <p id="resultado"></p>
+    <p id="ajuda" style="display:none;">Dica: O nome é um número em inglês.</p>
 
+    <div class="d-flex gap-2 justify-content-center py-5">
+        <button onclick="mostrarAjuda()" class="btn btn-primary d-inline-flex align-items-center" type="button">
+            AJUDA
+            <svg class="bi ms-1" width="20" height="20"><use xlink:href="#arrow-right-short"/></svg>
+        </button>
+        <a href="PERGUNTA2.HTML" class="btn btn-primary d-inline-flex align-items-center">
+            PRÓXIMA PERGUNTA
+            <svg class="bi ms-1" width="20" height="20"><use xlink:href="#arrow-right-short"/></svg>
+        </a>
+        <button onclick="reiniciarQuiz()" class="btn btn-primary d-inline-flex align-items-center" type="button">
+            REINICIAR
+        </button>
+    </div>
 
+    <script>
+        function mostrarAjuda() {
+            var ajuda = document.getElementById("ajuda");
+            ajuda.style.display = "block";
+        }
 
+        function verificarResposta(resposta) {
+            var resultado = document.getElementById("resultado");
+            if (resposta === "Eleven") {
+                resultado.textContent = "CORRETO!";
+            } else {
+                resultado.textContent = "INCORRETO";
+            }
+        }
 
-
-
-
-
-  
-</script>
-
-
-
-
-
-
-
+        function reiniciarQuiz() {
+            var resultado = document.getElementById("resultado");
+            resultado.textContent = "";
+            var ajuda = document.getElementById("ajuda");
+            ajuda.style.display = "none";
+        }
+    </script>
 </body>
 </html>
